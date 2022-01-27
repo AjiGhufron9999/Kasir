@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "kasir-cemerlang": {
+      "hosting": {
+        "Kasir-Cemerlang": [
+          "kasir-cemerlang"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "kasir-cemerlang"
+  }
+}

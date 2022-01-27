@@ -1,0 +1,68 @@
+
+<router-outlet></router-outlet>
+<div>
+  <button mat-button class="mat-baru-button mat-button" (click)="barangDetail({},-1)"><mat-icon>input</mat-icon>Tambah Barang</button>
+</div>
+<br>
+<div class="table-barang mat-elevation-z8">
+    <mat-form-field appearance="standard" class="">
+        <mat-label>Filter</mat-label>
+        <input matInput (keyup)="applyFilter($event)" placeholder="Ex. ium"  #inputBox>
+      </mat-form-field>
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+      <ng-container matColumnDef="No">
+        <th mat-header-cell *matHeaderCellDef class="table-th"> No </th>
+        <td mat-cell *matCellDef="let element; let i = index"> {{i+1}} </td>
+      </ng-container>
+      <!-- Position Column -->
+      <ng-container matColumnDef="kode">
+        <th mat-header-cell *matHeaderCellDef class="table-th"> Kode </th>
+        <td mat-cell *matCellDef="let element"> {{element.kode}} </td>
+      </ng-container>
+
+      <!-- Name Column -->
+      <ng-container matColumnDef="namaBarang">
+        <th mat-header-cell *matHeaderCellDef class="table-th"> Nama Barang </th>
+        <td mat-cell *matCellDef="let element"> {{element.namaBarang}} </td>
+      </ng-container>
+
+      <!-- Weight Column -->
+      <ng-container matColumnDef="satuan">
+        <th mat-header-cell *matHeaderCellDef class="table-th"> Satuan </th>
+        <td mat-cell *matCellDef="let element"> {{element.satuan}} </td>
+      </ng-container>
+
+      <!-- Symbol Column -->
+      <ng-container matColumnDef="hargaJual" class="table-th">
+        <th mat-header-cell *matHeaderCellDef class="table-th"> Harga Jual </th>
+        <td mat-cell *matCellDef="let element"> {{element.hargaJual}} </td>
+      </ng-container>
+      <ng-container matColumnDef="diskon">
+        <th mat-header-cell *matHeaderCellDef class="table-th"> Diskon </th>
+        <td mat-cell *matCellDef="let element"> {{element.diskon}} </td>
+      </ng-container>
+      <ng-container matColumnDef="hargaBeli">
+        <th mat-header-cell *matHeaderCellDef class="table-th"> harga Beli </th>
+        <td mat-cell *matCellDef="let element"> {{element.hargaBeli}} </td>
+      </ng-container>
+      <ng-container matColumnDef="Jenis">
+        <th mat-header-cell *matHeaderCellDef class="table-th"> Jenis </th>
+        <td mat-cell *matCellDef="let element"> {{element.jenis}} </td>
+      </ng-container>
+      <ng-container matColumnDef="Action">
+        <th mat-header-cell *matHeaderCellDef class="table-th"> Aksi </th>
+        <td mat-cell *matCellDef="let element; let i = index">  
+          <button mat-button class="mat-edit-button mat-button" (click)="barangDetail(barang,i)"><mat-icon>edit</mat-icon>Edit</button>
+          <button mat-button class="mat-delete-button mat-button"(click)="deleteBarang(i)"><mat-icon>delete</mat-icon>Delete</button> 
+        </td>
+      </ng-container>
+      
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns; let i = index;"
+      ></tr>
+    </table>
+  </div>
+  <br>
+

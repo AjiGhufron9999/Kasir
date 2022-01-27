@@ -1,0 +1,14 @@
+{
+    "users": [{
+        "id": 1,
+        "name": "roy",
+        "location": "india"
+    }, {
+        "id": 2,
+        "name": "sam",
+        "location": "wales"
+    }],
+    "barang":[
+        {"kode": 1, "namaBarang": "Hydrogen", "satuan":"pcs",  "hargaJual": 10000, "diskon":"", "hargaBeli":9000, "Jenis":""}
+    ]
+}

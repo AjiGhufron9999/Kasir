@@ -1,0 +1,42 @@
+<div class="content-dialog">
+
+    <h1>Tambah Barang</h1>
+
+    <mat-form-field class="example-full-width" appearance="fill" >
+        <mat-label>Kode</mat-label>
+        <input matInput placeholder="" [(ngModel)]="data.kode">
+      </mat-form-field>
+      <mat-form-field class="example-full-width" appearance="fill" >
+        <mat-label>Nama Barang</mat-label>
+        <input matInput placeholder="" [(ngModel)]="data.namaBarang">
+      </mat-form-field>
+      <mat-form-field class="example-full-width" appearance="fill" >
+        <mat-label>Satuan</mat-label>
+        <mat-select>
+            <mat-option value="pcs">Pcs</mat-option>
+            <mat-option value="kg">kg</mat-option>
+            <mat-option value="rt">Renteng</mat-option>
+            <mat-option value="lusin">lusin</mat-option>
+            <mat-option value="botol">botol</mat-option>
+            <mat-option value="gelas">gelas</mat-option>
+        </mat-select>
+      </mat-form-field><mat-form-field class="example-full-width" appearance="fill" >
+        <mat-label>Harga Jual</mat-label>
+        <input matInput placeholder="" [(ngModel)]="data.hargaJual">
+      </mat-form-field><mat-form-field class="example-full-width" appearance="fill" >
+        <mat-label>diskon</mat-label>
+        <input matInput placeholder="" [(ngModel)]="data.diskon">
+      </mat-form-field><mat-form-field class="example-full-width" appearance="fill" >
+        <mat-label>Harga Beli</mat-label>
+        <input matInput placeholder="" [(ngModel)]="data.hargaBeli">
+      </mat-form-field><mat-form-field class="example-full-width" appearance="fill" >
+        <mat-label>Jenis</mat-label>
+        <input matInput placeholder="" [(ngModel)]="data.jenis">
+      </mat-form-field>
+      <br>
+      <button mat-button class="mat-save-button mat-button" (click)="saveData()"><mat-icon>save</mat-icon> Simpan</button>
+      <button mat-button class="mat-batal-button mat-button"(clcik)="cancel()"><mat-icon>cancel</mat-icon> Batal</button>
+      
+
+
+</div>
